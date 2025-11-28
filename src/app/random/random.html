@@ -1,0 +1,4 @@
+<h2>Random number (1-{{max}}): </h2>
+<h2 [ngStyle]="{ color: value! <= halfMax! ? 'green' : 'red'}">{{value}}</h2>
+<p>{{value! <= halfMax! ? 'Value is less than ' + halfMax : 'Value is greater than ' + halfMax}}</p>
+<button (click)="generateRandom()">Random</button>

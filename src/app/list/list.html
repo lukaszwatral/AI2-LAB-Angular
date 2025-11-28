@@ -1,0 +1,7 @@
+<h2>To do list:</h2>
+<input type="text" [(ngModel)]="val" (keyup.enter)="addItem()">
+<ul>
+  @for (item of items; track item) {
+    <li>{{item}}</li><button (click)="removeItem($index)">X</button>
+  }
+</ul>
