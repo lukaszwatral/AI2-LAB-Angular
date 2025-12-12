@@ -1,0 +1,19 @@
+<h1>Person details</h1>
+
+<mat-card>
+  <mat-card-title>
+    {{ person?.firstName }} {{ person?.familyName }}
+  </mat-card-title>
+  <mat-card-content>
+    <p><strong>Age:</strong> {{ person?.age }}</p>
+    <h5>Address</h5>
+    <p><strong>Street:</strong> {{ person?.address?.street }}</p>
+    <p><strong>Post Code:</strong> {{ person?.address?.postCode }}</p>
+    <p><strong>City:</strong> {{ person?.address?.city }}</p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card-actions>
+  <button mat-button routerLink="/">Back to Person List</button>
+</mat-card-actions>
+

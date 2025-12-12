@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+
+$my-theme: mat.define-theme((
+  color: (
+    primary: mat.$magenta-palette,
+    tertiary: mat.$violet-palette,
+  ),
+));
+
+@include mat.all-component-themes($my-theme);
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+}

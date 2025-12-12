@@ -1,0 +1,20 @@
+<h1>Person List</h1>
+
+<mat-list>
+  @for (person of persons; track $index ) {
+    <mat-list-item>
+      {{ person.firstName }} {{ person.familyName }}
+      <button mat-icon-button [routerLink]="'/details/' + $index">
+        <mat-icon>visibility</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="personService.removePersonById($index)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+    @if ($index < persons.length - 1) {
+      <mat-divider></mat-divider>
+    }
+  } @empty {
+    <mat-list-item>Empty list.</mat-list-item>
+  }
+</mat-list>

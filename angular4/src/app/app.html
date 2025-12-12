@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <span>Person App</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/">Person List</button>
+  <button mat-button routerLink="/add">Add</button>
+</mat-toolbar>
+
+<main class="main">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  <footer class="footer">
+    <span>&copy; {{ currentYear }} - Łukasz Watral 53674</span>
+  </footer>
+</main>
+
+<style>
+  .spacer {
+    flex: 1 1 auto;
+  }
+</style>
